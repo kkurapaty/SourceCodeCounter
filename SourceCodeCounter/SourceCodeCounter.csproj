@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A277B6BD-C664-47D6-9C65-8DF1A0ECAB97}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <OutputPath>Bin\</OutputPath>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SourceCodeCounter</RootNamespace>
+    <AssemblyName>SourceCodeCounter</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>SourceCodeCounter.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>My-Computer.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Build.Tasks.v4.0" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Windows.Forms.DataVisualization.Design" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Common\CharExtension.cs" />
+    <Compile Include="Common\CollectionExtensions.cs" />
+    <Compile Include="Common\EnumExtensions.cs" />
+    <Compile Include="Common\ExceptionExtensions.cs" />
+    <Compile Include="Common\SampleGarbageCollector.cs" />
+    <!-- Compile Include="Common\GlobalServiceLocator.cs" / -->
+    <Compile Include="Common\HelperClass.cs" />
+    <Compile Include="Common\ObjectExtensions.cs" />
+    <Compile Include="Common\RichTextBoxExtensions.cs" />
+    <Compile Include="Common\StringExtensions.cs" />
+    <Compile Include="GUI\SplashScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SplashScreen.Designer.cs">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\ISourceFile.cs" />
+    <Compile Include="Core\Projects.cs" />
+    <Compile Include="GUI\AboutDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\AboutDlg.Designer.cs">
+      <DependentUpon>AboutDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Contols\ProjectControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Contols\ProjectControl.Designer.cs">
+      <DependentUpon>ProjectControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Contols\SourceControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Contols\SourceControl.Designer.cs">
+      <DependentUpon>SourceControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Contols\VerticalTabPageButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="GUI\Contols\VerticalTabPageButton.Designer.cs">
+      <DependentUpon>VerticalTabPageButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Contols\VerticalTabControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Contols\VerticalTabControl.Designer.cs">
+      <DependentUpon>VerticalTabControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\SourceInfoDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\SourceInfoDlg.Designer.cs">
+      <DependentUpon>SourceInfoDlg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\OutputLogger.cs" />
+    <Compile Include="Interfaces\IComment.cs" />
+    <Compile Include="Interfaces\ICommentBlock.cs" />
+    <Compile Include="Interfaces\IProject.cs" />
+    <Compile Include="Core\SourceResult.cs" />
+    <Compile Include="Core\SourceFileHandler.cs" />
+    <Compile Include="Core\InvalidArgumentException.cs" />
+    <Compile Include="Core\InvalidFileException.cs" />
+    <Compile Include="Core\ReportElements.cs" />
+    <Compile Include="Interfaces\IProjects.cs" />
+    <Compile Include="Interfaces\ISourceResult.cs" />
+    <Compile Include="Interfaces\ITaskArguments.cs" />
+    <Compile Include="Core\SourceController.cs" />
+    <Compile Include="Core\Project.cs" />
+    <Compile Include="Core\SourceFile.cs" />
+    <Compile Include="GUI\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\ISourceHandler.cs" />
+    <Compile Include="Parsers\Comment.cs" />
+    <Compile Include="Parsers\CommentBlock.cs" />
+    <Compile Include="Parsers\CParser.cs" />
+    <Compile Include="Parsers\CSharpParser.cs" />
+    <Compile Include="Parsers\DelphiParser.cs" />
+    <Compile Include="Parsers\BaseParser.cs" />
+    <Compile Include="Parsers\ParserFactory.cs" />
+    <Compile Include="Parsers\PascalParser.cs" />
+    <Compile Include="Parsers\VisualBasicParser.cs" />
+    <Compile Include="Process\ASyncTask.cs" />
+    <Compile Include="Process\ProcessNotifyEventArgs.cs" />
+    <Compile Include="Process\ASyncTaskController.cs" />
+    <Compile Include="Process\ProgressStatus.cs" />
+    <Compile Include="Process\TaskArguments.cs" />
+    <Compile Include="Process\Delegates.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="GUI\ProjectSelectionDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ProjectSelectionDialog.Designer.cs">
+      <DependentUpon>ProjectSelectionDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\AboutDlg.resx">
+      <DependentUpon>AboutDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Contols\ProjectControl.resx">
+      <DependentUpon>ProjectControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Contols\SourceControl.resx">
+      <DependentUpon>SourceControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ProjectSelectionDialog.resx">
+      <DependentUpon>ProjectSelectionDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SourceInfoDlg.resx">
+      <DependentUpon>SourceInfoDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\SplashScreen.resx">
+      <DependentUpon>SplashScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="My-Computer.ico" />
+    <Content Include="Resources\Splash.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="References">
+    <Message Text="System.Windows.Forms.DataVisualization Chart reference required." Importance="high" />
+  </Target>
+  <Target Name="Make">
+    <MakeDir Directories="$(OutputPath)" Condition="!Exists('$(OutputPath)')" />
+    <Csc Sources="@(Compile)" OutputAssembly="$(OutputPath)$(AssemblyName).exe" />
+    <Csc References="@(Reference)" />
+    <Message Text="Make is now complete." Importance="high" />
+  </Target>
+  <Target Name="Clean">
+    <Delete Files="$(OutputPath)$(AssemblyName).exe" />
+    <Message Text="Clean is now complete." Importance="high" />
+  </Target>
+  <Target Name="Rebuild" DependsOnTargets="Clean;Build" />
+  <Target Name="MakeVeryClean" DependsOnTargets="Rebuild">
+    <Message Text="MakeVeryClean is now activated" Importance="high" />
+    <MakeDir Directories="$(OutputPath)" Condition="!Exists('$(OutputPath)')" />
+    <Message Text="MakeVeryClean is now complete." Importance="high" />
+  </Target>
+  <Target Name="Deploy" DependsOnTargets="Build">
+    <Copy SourceFiles="$(OutputPath)" DestinationFolder="@(TargetFolder)">
+      <Output TaskParameter="CopiedFiles" ItemName="SuccessfullyCopiedFiles" />
+    </Copy>
+  </Target>
+  <Target Name="BeforeBuild" DependsOnTargets="ResolveProjectReferences;ResolveAssemblyReferences">
+    <Message Text="BeforeBuild: Checking for assembly references ..." Importance="high" />
+  </Target>
+  <PropertyGroup>
+    <PostBuildEvent>copy $(TargetPath) H:\demo\$(TargetName)$(TargetExt)</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+
+  <Target Name="AfterBuild">
+  </Target>
+  
+  -->
+</Project>

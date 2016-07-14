@@ -1,0 +1,10 @@
+<StyleCopSettings Version="105">
+  <Analyzers>
+    <Analyzer AnalyzerId="StyleCop.CSharp.DocumentationRules">
+      <AnalyzerSettings>
+        <StringProperty Name="CompanyName">Morgan Stanley</StringProperty>
+        <StringProperty Name="Copyright">Copyright (c) 2014 Morgan Stanley All rights reserved</StringProperty>
+      </AnalyzerSettings>
+    </Analyzer>
+  </Analyzers>
+</StyleCopSettings>
