@@ -58,7 +58,7 @@
             this.mniClearItems = new System.Windows.Forms.ToolStripMenuItem();
             this.mniScanSelected = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripSeparator();
-            this.mniTPlusProjects = new System.Windows.Forms.ToolStripMenuItem();
+            this.mniMyProjects = new System.Windows.Forms.ToolStripMenuItem();
             this.myProjectsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lblProjects = new System.Windows.Forms.Label();
             this.chkPercentage = new System.Windows.Forms.CheckBox();
@@ -344,7 +344,7 @@
             this.mniClearItems,
             this.mniScanSelected,
             this.toolStripMenuItem2,
-            this.mniTPlusProjects,
+            this.mniMyProjects,
             this.myProjectsToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(200, 170);
@@ -399,20 +399,20 @@
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
             this.toolStripMenuItem2.Size = new System.Drawing.Size(196, 6);
             // 
-            // mniTPlusProjects
+            // mniMyProjects
             // 
-            this.mniTPlusProjects.Name = "mniTPlusProjects";
-            this.mniTPlusProjects.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
-            this.mniTPlusProjects.Size = new System.Drawing.Size(199, 22);
-            this.mniTPlusProjects.Text = "Default Projects";
-            this.mniTPlusProjects.Click += new System.EventHandler(this.mniTPlusProjects_Click);
+            this.mniMyProjects.Name = "mniMyProjects";
+            this.mniMyProjects.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.D)));
+            this.mniMyProjects.Size = new System.Drawing.Size(199, 22);
+            this.mniMyProjects.Text = "My Projects";
+            this.mniMyProjects.Click += new System.EventHandler(this.mniMyProjects_Click);
             // 
             // myProjectsToolStripMenuItem
             // 
             this.myProjectsToolStripMenuItem.Name = "myProjectsToolStripMenuItem";
             this.myProjectsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.M)));
             this.myProjectsToolStripMenuItem.Size = new System.Drawing.Size(199, 22);
-            this.myProjectsToolStripMenuItem.Text = "My Projects";
+            this.myProjectsToolStripMenuItem.Text = "Default Projects";
             this.myProjectsToolStripMenuItem.Click += new System.EventHandler(this.myProjectsToolStripMenuItem_Click);
             // 
             // lblProjects
@@ -618,7 +618,7 @@
         private System.Windows.Forms.ToolStripMenuItem mniRemoveItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem mniClearItems;
-        private System.Windows.Forms.ToolStripMenuItem mniTPlusProjects;
+        private System.Windows.Forms.ToolStripMenuItem mniMyProjects;
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripProgressBar progressBar;
         private System.Windows.Forms.ToolStripStatusLabel statusPanel1;
