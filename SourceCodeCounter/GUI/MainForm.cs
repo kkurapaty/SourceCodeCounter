@@ -291,35 +291,28 @@ namespace SourceCodeCounter.GUI
             SetButtons();
         }
 
-        private void mniTPlusProjects_Click(object sender, EventArgs e)
+        private void mniMyProjects_Click(object sender, EventArgs e)
         {
-            // Tempest Projects
-            AddProject("Tempest+ Client",  @"C:\MSDE\Dev\Commodities\tempest\Tempestplus2\dev\client\*.pas", true);
-            AddProject("Tempest+ Servers", @"C:\MSDE\Dev\Commodities\tempest\Tempestplus2\dev\server\*.pas", true);
-            AddProject("Tempest+ Shared",  @"C:\MSDE\Dev\Commodities\tempest\Tempestplus2\dev\shared\*.pas", true);
+            // Predefined Projects to Load
+            AddProject("Client",  @"C:\dev\client\*.*", true);
+            AddProject("Servers", @"C:\dev\server\*.*", true);
+            AddProject("Shared",  @"C:\dev\shared\*.*", true);
 
-            // Tempest Components
-            AddProject("TPlus DEV Components", @"C:\MSDE\Dev\Commodities\tempest\d_components\dev\*.pas", true);
-            AddProject("TPlus SQLDirect Comps", @"C:\MSDE\Dev\Commodities\tempest\d_components\devSQLDirect\*.pas", true);
+            // Custom Components
+            AddProject("Components", @"C:\dev\Components\*.*", true);
 
-            // Trade Uploader
-            AddProject("Trade Uploader", @"C:\MSDE\Dev\Commodities\tempest\TradeUploader\dev\TradeUploader.sln", true);
-
-            // Tempest Manager
-            AddProject("Tempest Manager", @"C:\MSDE\Dev\Commodities\tempest\TempestManSD\dev\src\TempestMan.dpr", true);
-
-            // Tempest Schema
-            AddProject("Tempest Schema", @"C:\MSDE\Dev\Commodities\tempest\schema\dev\*.sql", true);
+            // DB Schema
+            AddProject("DB Schema", @"C:\dev\Schema\*.*", true);
 
         }
 
         private void myProjectsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // Delphi Projects
-            AddProject("Delphi Projects", @"C:\Users\kuraki\kuraki\Examples\Delphi\*.dpr", true);
+            AddProject("Delphi Projects", @"C:Projects\Delphi\*.dpr", true);
 
             // .Net Projects
-            AddProject(".Net Projects", @"C:\Users\kuraki\kuraki\Examples\CSharp\*.sln", true);
+            AddProject(".Net Projects", @"C:\Projects\CSharp\*.sln", true);
         }
 
         private void mniScanSelectedProject_Click(object sender, EventArgs e)
